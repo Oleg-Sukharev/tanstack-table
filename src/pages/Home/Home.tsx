@@ -44,7 +44,7 @@ declare module "@tanstack/table-core" {
 
 export const Home: FC = () => {
   const [query, setQuery] = useState<string>("");
-  const [globalFilter, setGlobalFilter] = useState("");
+  const [globalFilter, setGlobalFilter] = useLocalStorage("globalFilter", "");
   const [columnVisibility, setColumnVisibility] = useLocalStorage("columnVisibility", {});
   const [pagination, setPagination] = useState<PaginationState>({
     pageIndex: 0,
