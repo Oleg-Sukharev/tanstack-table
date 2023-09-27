@@ -4,7 +4,7 @@ import { userService } from "@/services/userService";
 import { IUser } from "@/constants/types";
 import { PaginationControls } from "./PaginationControls";
 import { SearchInput } from "./SearchInput";
-import { Alert, alertVariants } from "@/components/UI/Alert";
+import { Alert, alertVariants } from "@/components/Alert";
 import { TableContent } from "./TableContent";
 import {
   PaginationState,
@@ -16,14 +16,14 @@ import {
 } from "@tanstack/react-table";
 import { ITEMS_PER_PAGE, STATIC_COLUMNS, HIDDEN_IN_CHECk_LIST } from "@/constants/constants";
 
-import { IconButton } from "@/components/UI/IconButton";
-import { Link } from "@/components/UI/Link";
+import { IconButton } from "@/components/IconButton";
+import { Link } from "@/components/Link";
 
-import { Avatar } from "@/components/UI/Avatar";
+import { Avatar } from "@/components/Avatar";
 import SettingsIcon from "@/assets/images/settingsIcon.svg?react";
 import MaleIcon from "@/assets/images/maleIcon.svg?react";
 import FemaleIcon from "@/assets/images/femaleIcon.svg?react";
-import { Icon } from "@/components/UI/Icon";
+import { Icon } from "@/components/Icon";
 import { formatDate } from "@/utils/formatDate";
 import { useLocalStorage } from "@/hooks/useLocalStorage";
 
@@ -34,7 +34,7 @@ import {
   DropdownMenuTrigger,
   DropdownMenuContent,
   DropdownMenuCheckboxItem,
-} from "@/components/UI/DropdownMenu";
+} from "@/components/DropdownMenu";
 
 declare module "@tanstack/table-core" {
   interface FilterFns {

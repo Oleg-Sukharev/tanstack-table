@@ -1,13 +1,13 @@
 import { useMemo, useState } from "react";
-import { IconButton } from "@/components/UI/IconButton";
+import { IconButton } from "@/components/IconButton";
 import LeftIcon from "@/assets/images/leftIcon.svg?react";
 import RightIcon from "@/assets/images/rightIcon.svg?react";
 import LeftLineIcon from "@/assets/images/leftLineIcon.svg?react";
 import RightLineIcon from "@/assets/images/rightLineIcon.svg?react";
-import { Input } from "@/components/UI/Input";
+import { Input } from "@/components/Input";
 import { ITEMS_PER_PAGE } from "@/constants/constants";
 
-import { Select, SelectContent, SelectGroup, SelectItem, SelectTrigger, SelectValue } from "@/components/UI/Select";
+import { Select, SelectContent, SelectGroup, SelectItem, SelectTrigger, SelectValue } from "@/components/Select";
 
 export const PaginationControls = ({ table, total }: any) => {
   const [inputPage, setInputValue] = useState(() => table.getState().pagination.pageIndex + 1);

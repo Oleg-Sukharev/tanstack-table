@@ -1,5 +1,5 @@
-import { Alert, alertVariants } from "@/components/UI/Alert";
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/UI/Table";
+import { Alert, alertVariants } from "@/components/Alert";
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/Table";
 import { flexRender } from "@tanstack/react-table";
 
 export const TableContent = ({ data }: any) => {

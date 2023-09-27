@@ -1,7 +1,7 @@
 import * as React from "react";
 import * as DropdownMenuPrimitive from "@radix-ui/react-dropdown-menu";
 import MarkIcon from "@/assets/images/markIcon.svg?react";
-import { Icon } from "@/components/UI/Icon";
+import { Icon } from "@/components/Icon";
 
 import { mergeClassesUtils } from "@/utils/mergeClassesUtils";
 

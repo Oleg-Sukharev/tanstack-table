@@ -1,6 +1,6 @@
 import * as React from "react";
-import { Input } from "@/components/UI/Input";
-import { Icon } from "@/components/UI/Icon";
+import { Input } from "@/components/Input";
+import { Icon } from "@/components/Icon";
 import SearchIcon from "@/assets/images/searchIcon.svg?react";
 import { useState } from "react";
 import { useDebounce } from "@/hooks/useDebounce";
