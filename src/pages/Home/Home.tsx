@@ -265,8 +265,6 @@ export const Home: FC = () => {
     getFilteredRowModel: getFilteredRowModel(),
   });
 
-  const totalUsers = data?.totalUsers || [];
-
   return (
     <div className="m-auto max-w-7xl">
       <h1 className="sr-only">User list</h1>
@@ -277,7 +275,7 @@ export const Home: FC = () => {
           {!!error && <Alert type={alertVariants.Error} />}
           {isLoading && <Alert type={alertVariants.Loading} />}
         </div>
-        <PaginationControls table={table} total={totalUsers} />
+        <PaginationControls table={table} total={data?.totalUsers} />
       </div>
     </div>
   );
