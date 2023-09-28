@@ -1,27 +1,49 @@
-# React + TypeScript + Vite
+# React + TypeScript + Vite + TanStack Table v8 + React Query + Radix UI primitives  + Tailwindcss
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Features:
 
-Currently, two official plugins are available:
+Followed requirements:
+1. Valid markup;
+2. Good a11y (navigating by keyboard, screen readers);
+3. Good performance;
+4. 1024px minimal screen size by width (should not skip some devices with
+similar screen size);
+5. Cross-browser compatible (Safari/iPadOS/iOS >= 14, Chrome >= 88, Firefox
+>= 78, Edge >= 88, Opera >= 74, Samsung Internet >= 15); vite from the box covers this point
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### API -  DummyJSON
+https://dummyjson.com/ 
+https://dummyjson.com/users
 
-## Expanding the ESLint configuration
+### Install packages
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+```shell
+npm i
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+### Start the app
+
+```shell
+npm run dev
+```
+
+### Build the app
+
+```shell
+npm run build
+```
+
+### Features
+
+- Sticky Table Header, First, and Last Columns
+- Table settings button includes a combobox for column management.
+- Users can remove or add columns to the table.
+  Options for full name, username, settings, and email are disabled for selection.
+- Table settings are saved to local storage and persist after page reloads.  
+- Client-side search functionality within the combobox, without the need for API.
+
+# Server side Pagination and search filters
+- Search functionality is available via API.
+- Pagination functionality is implemented via API.
+- Users can choose the number of items per page from options: 10, 20, and 50.
+  Input validation ensures only numbers are accepted, and it cannot exceed the total number of pages in the table.
