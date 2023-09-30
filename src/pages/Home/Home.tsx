@@ -87,13 +87,15 @@ export const Home: FC = () => {
       {
         accessorKey: "fullname",
         header: "Full Name",
-        accessorFn: (row) => [`${row.firstName} ${row.maidenName} ${row.lastName}`, row.image],
-        cell: ({ row }) => {
-          const [fullname, src] = row.getValue<string[]>("fullname");
+        // accessorFn: (row) => [`${row.firstName} ${row.maidenName} ${row.lastName}`, row.image],
+        accessorFn: (row) => `${row.firstName} ${row.maidenName} ${row.lastName}`,
+        cell: ({ row, getValue }) => {
+          // const [fullname, src] = row.getValue<string[]>("fullname");
+          const fullname = String(getValue());
 
           return (
             <div className="flex items-center gap-2">
-              <Avatar url={src} /> {fullname}{" "}
+              <Avatar url={row.original.image} /> {fullname}
             </div>
           );
         },
