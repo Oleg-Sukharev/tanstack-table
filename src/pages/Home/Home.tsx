@@ -18,6 +18,7 @@ import { ITEMS_PER_PAGE, STATIC_COLUMNS, HIDDEN_IN_CHECk_LIST } from "@/constant
 
 import { IconButton } from "@/components/IconButton";
 import { Link } from "@/components/Link";
+import { Checkbox } from "@/components/Checkbox";
 
 import { Avatar } from "@/components/Avatar";
 import SettingsIcon from "@/assets/images/settingsIcon.svg?react";
@@ -221,7 +222,7 @@ export const Home: FC = () => {
                     if (HIDDEN_IN_CHECk_LIST.includes(column.id)) return null;
 
                     return (
-                      <DropdownMenuCheckboxItem
+                      <Checkbox
                         key={column.id}
                         checked={column.getIsVisible()}
                         onClick={column.getToggleVisibilityHandler()}
@@ -230,7 +231,7 @@ export const Home: FC = () => {
                         aria-label="show/hide column"
                       >
                         {column.id}
-                      </DropdownMenuCheckboxItem>
+                      </Checkbox>
                     );
                   })}
                 </div>
