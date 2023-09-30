@@ -122,6 +122,7 @@ export const Home: FC = () => {
       {
         header: "email",
         accessorKey: "email",
+        enableGlobalFilter: false,
         cell: ({ getValue }) => {
           const mail = String(getValue());
           return <Link text={mail} url={`mailto:${mail}`} className="font-normal text-state-900 no-underline" />;
