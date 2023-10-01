@@ -34,7 +34,6 @@ import {
   DropdownMenu,
   DropdownMenuTrigger,
   DropdownMenuContent,
-  DropdownMenuCheckboxItem,
 } from "@/components/DropdownMenu";
 
 declare module "@tanstack/table-core" {

@@ -13,7 +13,7 @@ export const TableContent = ({ data }: any) => {
                 return (
                   <TableHead
                     key={header.id}
-                    className="[&:first-child]:sticky [&:first-child]:left-0 [&:last-child]:sticky [&:last-child]:right-0"
+                    className="[&:first-child]:sticky [&:first-child]:left-0 [&:last-child]:sticky [&:last-child]:right-0 [&:last-child]:w-[50px]"
                   >
                     {header.isPlaceholder ? null : flexRender(header.column.columnDef.header, header.getContext())}
                   </TableHead>
@@ -26,11 +26,15 @@ export const TableContent = ({ data }: any) => {
           <TableBody>
             {data.getRowModel().rows.map((row: any) => (
               <TableRow key={row.id}>
-                {row.getVisibleCells().map((cell: any) => {
+                {row.getVisibleCells().map((cell: any, index: number) => {
+                  const isLastCol = index === row.getVisibleCells().length - 1;
+                  if (isLastCol) return null;
+                  const colSpan = isLastCol ? 2 : 1;
+
                   return (
                     <TableCell
-                      className="[&:first-child]:sticky [&:first-child]:left-0 [&:last-child]:sticky [&:last-child]:right-0 "
                       key={cell.id}
+                      colSpan={colSpan}
                     >
                       {flexRender(cell.column.columnDef.cell, cell.getContext())}
                     </TableCell>
